@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>习惯老虎机</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- 顶部弹出消息容器 -->
+    <div id="toastContainer"></div>
+
+    <div class="container">
+        <!-- 统计信息栏 -->
+        <div class="stats-bar">
+            <span>📅 已打卡天数: <span id="daysDisplay">0</span></span>
+            <span>🔥 连胜: <span id="streakDisplay">0</span></span>
+        </div>
+
+        <h1>🎰 习惯老虎机</h1>
+        
+        <div class="score-board">
+            <p>当前积分: <span id="scoreDisplay">0</span> / 120</p>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+
+        <!-- 老虎机主体：加入跑马灯效果 -->
+        <div class="slot-machine" id="machine">
+            <!-- 滚筒被限定高度，超出的部分隐藏 -->
+            <div class="reel"><div class="reel-strip" id="strip1"></div></div>
+            <div class="reel"><div class="reel-strip" id="strip2"></div></div>
+            <div class="reel"><div class="reel-strip" id="strip3"></div></div>
+        </div>
+
+        <div class="controls">
+            <!-- 整合为一个主按钮 -->
+            <button id="mainBtn" class="btn-checkin">点击打卡</button>
+            <button id="penaltyBtn" class="btn-danger">中断打卡 (扣除3分)</button>
+        </div>
+    </div>
+
+    <audio id="audioSpin" src="assets/audio/spin.mp3" loop></audio>
+    <audio id="audioStop" src="assets/audio/stop.mp3"></audio>
+    <audio id="audioWinSmall" src="assets/audio/win_small.mp3"></audio>
+    <audio id="audioWinBig" src="assets/audio/win_big.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
