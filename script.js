@@ -49,6 +49,9 @@ penaltyBtn.addEventListener('click', () => {
     streak = 0; // 连胜清零
     score = Math.max(0, score - 3);
     updateUI();
+    const audioFail = document.getElementById('audioFail');
+    audioFail.currentTime = 0;
+    audioFail.play().catch(e=>{});
     showToast("💔 中断打卡 积分-3\n亡羊补牢，为时不晚！");
 });
 
