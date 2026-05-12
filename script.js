@@ -21,12 +21,12 @@ mainBtn.addEventListener('click', () => {
         streak++;
         
         let toastMsg = "已打卡 积分+1！";
-        score += 1; // 打卡基础分
+        // score += 1; // 打卡基础分
 
         // 连胜判断
-        if (streak % 5 === 0) {
-            score += 2; // 额外+2分（加上基础共+3分）
-            toastMsg = `连续五天打卡 积分+3\n🔥 坚持就是胜利！`;
+        if (streak % 7 === 0) {
+            score += 3; // 
+            toastMsg = `连续七天打卡 积分+3\n🔥 坚持就是胜利！`;
         }
         
         showToast(toastMsg);
