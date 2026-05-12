@@ -21,7 +21,6 @@ mainBtn.addEventListener('click', () => {
         streak++;
         
         let toastMsg = "已打卡 积分+1！";
-        // score += 1; // 打卡基础分
 
         // 连胜判断
         if (streak % 7 === 0) {
