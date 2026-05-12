@@ -20,7 +20,7 @@ mainBtn.addEventListener('click', () => {
         checkInDays++;
         streak++;
         
-        let toastMsg = "已打卡 积分+1！";
+        let toastMsg = "已完成打卡！";
 
         // 连胜判断
         if (streak % 7 === 0) {
